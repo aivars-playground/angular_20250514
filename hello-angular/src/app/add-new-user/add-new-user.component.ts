@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-add-new-user',
@@ -7,9 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './add-new-user.component.css'
 })
 export class AddNewUserComponent {
+
+  constructor(private userService: UserService) {}
+
   fullName: string = 'testUser'
 
-  deleteUser(fullName: string) {
-    console.log('DELETING USER:' + fullName);
+  addUser(fullName: string) {
+    this.userService.addUser(fullName)
   }
 }
