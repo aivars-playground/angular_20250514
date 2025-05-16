@@ -6,7 +6,11 @@ TYPESCRIPT-FUNDAMENTALS
 npm install -g typescript
 ```
 
+*compile in watch mode
 ```shell
- tsc --outDir js app.ts
+ tsc --outDir target --watch app.ts
 ```
 
+```shell
+ node ./target/app.js
+```
