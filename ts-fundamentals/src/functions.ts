@@ -112,36 +112,53 @@ const fun_arrow_square3: (x: number) => number =
 function fun_timestwo(nr: number): string
 function fun_timestwo(txt: string): string
 function fun_timestwo(property: any) {
-    var fun_res: string = ''
     if (typeof property == 'string') {
-        fun_res = property + property
+        return property + property
     } else if (typeof property == 'number') {
-        fun_res = `${property + property}`
+        return`${property + property}`
     }
-    return fun_res
+    return ""
 }
 
 console.log('timestwo 1 ->' + fun_timestwo(1))
 console.log('timestwo a ->' + fun_timestwo('a'))
-//console.log('timestwo true ->' + fun_timestwo(true)) nope
+//fun_timestwo(true) nope
 
 
 function fun_multi_item(nr: number): string
 function fun_multi_item(nr: number, street:string): string
 function fun_multi_item(nr: number, inUk:boolean, street:string): string
 function fun_multi_item(nr: number,streetOrInUk?: any,street?:string): string {
-    var fun_res: string = ''
     if (typeof streetOrInUk == 'string') {
-        fun_res = `unknown ctry, street:${streetOrInUk}, nr:${nr}`
+        return`unknown ctry, street:${streetOrInUk}, nr:${nr}`
     } else if (typeof streetOrInUk == 'boolean' && typeof street =='string') {
-        fun_res = `ctry UK:${streetOrInUk}, street:${street}, nr:${nr}`
-    } else if (typeof streetOrInUk == undefined && typeof street ==undefined) {
-        fun_res = `nr:${nr}`
+        return `ctry UK:${streetOrInUk}, street:${street}, nr:${nr}`
+    } else if (typeof streetOrInUk == 'undefined' && typeof street === 'undefined') {
+        return `nr:${nr}`
     }
-    return fun_res
+    throw Error("")
 }
 
 console.log('nr 1 ->' + fun_multi_item(1))
 console.log('nr 2 uk  line2->' + fun_multi_item(2, true, 'line2'))
 console.log('nr 3 line3 ->' + fun_multi_item(3, 'line3'))
+//fun_multi_item(100, `aaa`, 'bbb')
 
+function fun_multi_item2(nr: number): string
+function fun_multi_item2(nr: number, street:string): string
+function fun_multi_item2(nr: number, inUk:boolean, street:string): string
+function fun_multi_item2(nr: number,streetOrInUk?: string|boolean,street?:string): string {
+    if (typeof streetOrInUk == 'string') {
+        return`unknown ctry, street:${streetOrInUk}, nr:${nr}`
+    } else if (typeof streetOrInUk == 'boolean' && typeof street =='string') {
+        return `ctry UK:${streetOrInUk}, street:${street}, nr:${nr}`
+    } else if (typeof streetOrInUk == 'undefined' && typeof street === 'undefined') {
+        return `nr:${nr}`
+    }
+    throw Error("")
+}
+
+console.log('nr 5 ->' + fun_multi_item2(5))
+console.log('nr 6 uk  line2->' + fun_multi_item2(6, true, 'line2'))
+console.log('nr 7 line3 ->' + fun_multi_item2(7, 'line3'))
+//fun_multi_item2(100, `aaa`, 'bbb')
