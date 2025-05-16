@@ -1,6 +1,7 @@
 TYPESCRIPT-FUNDAMENTALS
 =======================
 */courses/typescript-5-fundamentals
+https://www.typescriptlang.org/docs/handbook/intro.html
 ----
 
 * install globally and set a project with defaults (tsconfig)
