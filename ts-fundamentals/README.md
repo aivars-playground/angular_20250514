@@ -3,7 +3,8 @@ TYPESCRIPT-FUNDAMENTALS
 */courses/typescript-5-fundamentals
 ----
 
-* install globally and set a project with defaults
+* install globally and set a project with defaults (tsconfig)
+* edit tsconfig
 ```shell
 npm install -g typescript
 tsc --init
@@ -11,7 +12,7 @@ tsc --init
 
 *compile in watch mode
 ```shell
- tsc --outDir target --watch app.ts
+ tsc --watch
 ```
 
 *run app

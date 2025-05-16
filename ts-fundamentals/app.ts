@@ -1,3 +1,3 @@
-let hello: string = 'Hello TS World!'
+let hello: string = 'Hello World!'
 
 console.log(hello)
