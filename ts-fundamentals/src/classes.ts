@@ -106,4 +106,56 @@ console.log("supersecret: " + cl_my_accessor.supersecretIntetnal)
 cl_my_accessor.supersecretIntetnal = 'new secret'
 console.log("supersecret: " + cl_my_accessor.supersecretIntetnal)
 
+//INHERITANCE
+console.log("---------------inheritance")
+
+class CL_PARENT {
+    publicMember1: number = 1
+    protected protectedMember2: number = 2
+    private protectedMember3:number =3
+}
+
+class CL_CHILD extends CL_PARENT {
+
+    ch_publicMember1: number = 1
+    protected ch_protectedMember2: number = 2
+    private ch_protectedMember3:number =3
+}
+
+class CL_CHILD_WITH_CONSTRUCTOR extends CL_PARENT {
+
+    constructor() {   //no args constructor, optional
+        super();      //mandatory call
+    }
+    ch_publicMember1: number = 1
+    protected ch_protectedMember2: number = 2
+    private ch_protectedMember3:number =3
+}
+
+let cl_child1 = new CL_CHILD()
+console.log(cl_child1.publicMember1)
+
+
+class CL_PARENT_ANOTHER {
+    constructor(public name: string) {
+    }
+    publicMember1: number = 1
+    protected protectedMember2: number = 2
+    private protectedMember3:number =3
+}
+
+
+class CL_CHILD_ANOTHER extends CL_PARENT_ANOTHER {
+
+    constructor() {
+        super("child");  //mandatory
+    }
+
+    ch_publicMember1: number = 1
+    protected ch_protectedMember2: number = 2
+    private ch_protectedMember3:number =3
+}
+
+
+
 
