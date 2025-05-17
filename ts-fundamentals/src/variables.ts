@@ -123,6 +123,11 @@ myWhateverString = undefined
 let myStringArray1: string[] = ['a', 'b', 'c']
 let myStringArray2: Array<string> = ['a', 'b', 'c']
 
-
+{
+    let v_a = 1
+    var v_b = 2
+}
+//console.log(v_a)  //do not see
+console.log(v_b)    //see inside the scope
 
 
