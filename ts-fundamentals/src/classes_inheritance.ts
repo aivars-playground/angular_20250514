@@ -86,5 +86,5 @@ console.log("ch-to-parent-if")
 let inh_child_2_parent: INH_PARENT = new INH_CHILD()
 inh_child_2_parent.doPrint()
 console.log("ch-to-parent--to-child-if")
-let inh_child_2_parent_2_ch: INH_CHILD =  inh_child_2_parent;
+let inh_child_2_parent_2_ch: INH_CHILD = inh_child_2_parent as INH_CHILD
 inh_child_2_parent_2_ch.doPrint()

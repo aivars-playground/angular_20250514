@@ -155,7 +155,3 @@ class CL_CHILD_ANOTHER extends CL_PARENT_ANOTHER {
     protected ch_protectedMember2: number = 2
     private ch_protectedMember3:number =3
 }
-
-
-
-
