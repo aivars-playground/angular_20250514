@@ -19,4 +19,21 @@ export class HomeComponent implements OnInit {
     dosomething, (fetch data)
   }
 }
-``
+```
+
+binding data
+------------
+**** binding - if data changes, html page is updated!!! -- binding!!!
+* bind data
+`<div class="name">{{ product.name }}</div>`
+
+* interpolation, bind to componnent property
+`<img src="{{ '/assets/images/robot-parts/' + product.imageName }}" alt="{{product.name}}" />`
+
+* bind attribute //one way binding!!!!
+`<img [src]="'/assets/images/robot-parts/' + product.imageName" [alt]="product.name" />`
+
+* bind attribute to function
+`<img [src]="getRobotPartImageUrl(product)" [alt]="product.name" />
+`
+

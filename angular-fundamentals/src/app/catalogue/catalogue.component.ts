@@ -20,4 +20,8 @@ export class CatalogueComponent {
       discount: 0.2,
     }
   }
+
+  getRobotPartImageUrl(product: IProduct): string {
+    return `/assets/images/robot-parts/${product.imageName}`;
+  }
 }
