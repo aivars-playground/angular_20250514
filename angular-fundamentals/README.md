@@ -5,3 +5,6 @@ Angular Fundamentals
 ```shell
 npm start
 ```
+```shell
+ng generate component home
+```
