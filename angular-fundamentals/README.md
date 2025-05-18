@@ -51,3 +51,7 @@ binding direction
 safe navigation
 ---------------
 `{{ product?.price?.toFixed(2) }}`
+
+formatting
+`product.price.toFixed(2)`
+`product.price | currency:'GBP'`
