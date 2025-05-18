@@ -34,6 +34,10 @@ binding data
 `<img [src]="'/assets/images/robot-parts/' + product.imageName" [alt]="product.name" />`
 
 * bind attribute to function
-`<img [src]="getRobotPartImageUrl(product)" [alt]="product.name" />
-`
+`<img [src]="getRobotPartImageUrl(product)" [alt]="product.name" />`
+
+iterate
+-------
+`<li class="product-item" *ngFor="let product of products">`
+`*ngFor - asterisk means it changes html....
 
