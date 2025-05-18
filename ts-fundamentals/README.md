@@ -46,3 +46,30 @@ npm install @types/lodash
 
 !!! note - sometimes developed by other developers... could have incompatability due to versioning (js / ts)
 
+DEBUG
+=====
+intellij automatically debugs ts file launch
+
+how to debug compilled (app.js launch???)
+```shell
+node ./target/app.js
+```
+
+* enable source map
+```shell
+tsc --sourceMap
+```
+enable `"sourceMap": true`, in tsconfig
+```shell
+tsc
+```
+check ./target  , *.js and *.js.map
+
+set debug point
+configure intellij launcher to start node compiled ./target/app.js
+launch in debug mode in Intellij
+
+troubleshoot
+------------
+if debuger does not stop, check if *.js.map files are generated
+
