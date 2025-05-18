@@ -9,6 +9,7 @@ import {IProduct} from './product/product.model';
 export class CatalogueComponent {
 
   products: IProduct[];
+  productCategoryFilter: string = ''
 
   constructor() {
     this.products = [
@@ -190,5 +191,11 @@ export class CatalogueComponent {
 
   getRobotPartImageUrl(product: IProduct): string {
     return `/assets/images/robot-parts/${product.imageName}`;
+  }
+
+  getFilteredProducts() {
+    return this.productCategoryFilter === ''
+      ? this.products
+      : this.products.filter((product: IProduct) => product.category === this.productCategoryFilter)
   }
 }

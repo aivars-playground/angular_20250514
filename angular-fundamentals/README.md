@@ -41,3 +41,11 @@ iterate
 `<li class="product-item" *ngFor="let product of products">`
 `*ngFor - asterisk means it changes html....
 
+
+
+binding direction
+-----------------
+* `[src]`     square bracket - component to template
+* `(clicl)`   parenthesid    - template to component
+
+
