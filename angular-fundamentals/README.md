@@ -48,4 +48,6 @@ binding direction
 * `[src]`     square bracket - component to template
 * `(clicl)`   parenthesid    - template to component
 
-
+safe navigation
+---------------
+`{{ product?.price?.toFixed(2) }}`

@@ -83,9 +83,10 @@
   width: 100px;
 }
 
-.discount {
+.product .discount {
   margin-top: -15px;
   color: #d25ca1;
+  background-color: green;
 }
 
 .strikethrough {
