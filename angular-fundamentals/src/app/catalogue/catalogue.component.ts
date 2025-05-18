@@ -198,4 +198,10 @@ export class CatalogueComponent {
       ? this.products
       : this.products.filter((product: IProduct) => product.category === this.productCategoryFilter)
   }
+
+  getCssClasses(product: IProduct) {
+    return product.discount != 0
+      ? ['strikethrough', 'bold']
+      : []
+  }
 }

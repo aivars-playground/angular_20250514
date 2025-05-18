@@ -61,6 +61,12 @@ classes
 -------
 `<div [class.strikethrough]="product.discount != 0">{{ product.price | currency:'GBP' }}</div>`
 * conditional class binding - add class if...   what if more classes?
+` <div [ngClass]="{ strikethrough: product.discount != 0}">{{ product.price | currency:'GBP' }}</div>-->`
+` [ngClass]="getCssClasses(product)"`  ..call method returning string, string[], undefined
+
+* bind style
+`[style.color]="product.discount != 0 ? 'green':''"`
+
 
 
 
