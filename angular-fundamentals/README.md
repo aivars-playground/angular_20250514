@@ -55,3 +55,13 @@ safe navigation
 formatting
 `product.price.toFixed(2)`
 `product.price | currency:'GBP'`
+
+
+classes
+-------
+`<div [class.strikethrough]="product.discount != 0">{{ product.price | currency:'GBP' }}</div>`
+* conditional class binding - add class if...   what if more classes?
+
+
+
+
