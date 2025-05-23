@@ -189,19 +189,9 @@ export class CatalogueComponent {
     ]
   }
 
-  getRobotPartImageUrl(product: IProduct): string {
-    return `/assets/images/robot-parts/${product.imageName}`;
-  }
-
   getFilteredProducts() {
     return this.productCategoryFilter === ''
       ? this.products
       : this.products.filter((product: IProduct) => product.category === this.productCategoryFilter)
-  }
-
-  getCssClasses(product: IProduct) {
-    return product.discount != 0
-      ? ['strikethrough', 'bold']
-      : []
   }
 }
