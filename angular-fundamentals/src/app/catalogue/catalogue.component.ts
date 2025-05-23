@@ -194,4 +194,8 @@ export class CatalogueComponent {
       ? this.products
       : this.products.filter((product: IProduct) => product.category === this.productCategoryFilter)
   }
+
+  addToCart(product: IProduct) {
+    
+  }
 }
