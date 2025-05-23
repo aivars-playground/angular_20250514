@@ -12,6 +12,8 @@ export class CatalogueComponent {
   products: IProduct[];
   productCategoryFilter: string = ''
 
+  //private cartService: CartService = inject(CartService); //an option, might limit testing
+
   constructor(private cartService: CartService) {
     this.products = [
       {
