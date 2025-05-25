@@ -10,6 +10,7 @@
   <div class="right" *ngIf="!user">
     <a routerLink = "/sign-in" routerLinkActive="active">Sign In</a>
     <a href="" class="cta">Register</a>
+    <a [routerLink]="['test-only','form']">test form</a>
   </div>
   <div class="right" *ngIf="user">
     <div>
