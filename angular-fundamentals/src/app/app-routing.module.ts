@@ -4,7 +4,7 @@ import {HomeComponent} from "./home/home.component";
 import {CatalogueComponent} from "./catalog/catalogue.component";
 import {CartComponent} from "./cart/cart.component";
 import {SignInComponent} from "./user/sign-in/sign-in.component";
-import {TemplateFormControlsComponent} from "./test-only/template-form-controls/template-form-controls.component";
+import {TemplateFormControlsComponent} from "./user/test-only/template-form-controls/template-form-controls.component";
 
 const routes: Routes = [
   {path: "", redirectTo: '/home', pathMatch: 'full'},

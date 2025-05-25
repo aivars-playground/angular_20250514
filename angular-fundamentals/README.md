@@ -148,3 +148,11 @@ bindings and forms
 login
 -----
 see api server for hrdcoded credentials [index.js](api-server/index.js)
+
+
+module
+------
+user functionality can be grouped into a module
+```shell
+ng g module user
+```
