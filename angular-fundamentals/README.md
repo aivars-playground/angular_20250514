@@ -131,10 +131,12 @@ so page need to subscribe to changes in the path
     })
   }
 ```
-
-better alternative - use query params
--------------------------------------
+* better alternative - use query params (they can be optional)
 
 
-
+active link
+-----------
+```html
+    <a routerLink = "/home" routerLinkActive="active-css-style">Home</a>
+```
 
