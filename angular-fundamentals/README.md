@@ -98,3 +98,10 @@ projects.angular-fundamentals.architect.serve.configurations.development.proxyCo
 ```
 
 
+routing
+-------
+* create a routing module (if not exists)
+```shell
+ng g module app-routing --flat --module=app
+```
+
