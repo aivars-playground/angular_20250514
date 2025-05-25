@@ -5,21 +5,24 @@
     <div class="sub-text">to acquire awesome bots</div>
     <input
       name="email"
-      #templateVariableEmail="ngModel"
       placeholder="Email Address"
       type="text"
+      required
       [(ngModel)]="credentials.email"
+      #templateVariableEmail="ngModel"
     />
+    <em class="error" *ngIf="templateVariableEmail.invalid && templateVariableEmail.touched">Email is required</em>
     <input
       name="password"
-      #templateVariablePassword="ngModel"
       placeholder="Password"
       type="password"
       required
       [(ngModel)]="credentials.password"
+      #templateVariablePassword="ngModel"
     />
+    <em class="error" *ngIf="templateVariablePassword.invalid && templateVariablePassword.touched">Password is required</em>
     <div class="buttons">
-      <button type="submit"class="button cta">
+      <button type="submit"class="button cta" [disabled]="templateVariableSignInForm.invalid">
         Sign In
       </button>
     </div>
@@ -31,7 +34,7 @@
   <tr>
     <td>
       <pre>
-        FORM
+FORM:
 templateVariableSignInForm valid:     {{templateVariableSignInForm.valid}}
 templateVariableSignInForm invalid:   {{templateVariableSignInForm.invalid}}
 templateVariableSignInForm dirty:     {{templateVariableSignInForm.dirty}}
@@ -43,7 +46,7 @@ templateVariableSignInForm submitted: {{templateVariableSignInForm.submitted}}
     </td>
     <td>
       <pre>
-EMAIL
+EMAIL:
 templateVariableEmail valid:     {{templateVariableEmail.valid}}
 templateVariableEmail invalid:   {{templateVariableEmail.invalid}}
 templateVariableEmail dirty:     {{templateVariableEmail.dirty}}
@@ -54,7 +57,7 @@ templateVariableEmail untouched: {{templateVariableEmail.untouched}}
     </td>
     <td>
       <pre>
-EMAIL
+PASSWORD
 templateVariablePassword valid:     {{templateVariablePassword.valid}}
 templateVariablePassword invalid:   {{templateVariablePassword.invalid}}
 templateVariablePassword dirty:     {{templateVariablePassword.dirty}}
