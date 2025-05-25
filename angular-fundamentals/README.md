@@ -140,3 +140,11 @@ active link
     <a routerLink = "/home" routerLinkActive="active-css-style">Home</a>
 ```
 
+bindings and forms
+-----------------
+`[(ngModel)]="credentials.email"` binds both dirrections
+
+
+login
+-----
+see api server for hrdcoded credentials [index.js](api-server/index.js)
