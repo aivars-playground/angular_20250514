@@ -105,3 +105,36 @@ routing
 ng g module app-routing --flat --module=app
 ```
 
+IMPORTANT
+---------
+when componrnt is loaded, from inside the componrnt, when <a> is pointing to self
+```html
+  <div class="filters">
+  <a class="button" routerLink="/catalog/Heads">Heads</a>
+  <a class="button" routerLink="/catalog/Arms">Arms</a>
+  <a class="button" routerLink="/catalog/Torsos">Torsos</a>
+  <a class="button" routerLink="/catalog/Bases">Bases</a>
+  <a class="button" [routerLink]="['/catalog', '']">All</a>
+</div>
+```
+and routing module uses path parrameters
+```typescript
+{path: "catalog/:filter", component: CatalogueComponent, title: "SHOP|Catalog"},
+```
+filter is mandatory, so whem passing empty filter - use `[routerLink]="['/catalog', '']`
+and page, if already loaded, unless reloaded, it would ignore param changes, 
+so page need to subscribe to changes in the path
+```typescript
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.filter = params['filter'] ?? '';
+    })
+  }
+```
+
+better alternative - use query params
+-------------------------------------
+
+
+
+
