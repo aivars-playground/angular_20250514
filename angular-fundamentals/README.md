@@ -1,6 +1,7 @@
 Angular Fundamentals
 ====================
 * https://app.pluralsight.com/library/courses/fundamentals-angular
+* https://github.com/jmcooper/joes-robot-shop/
 
 ```shell
 npm start
@@ -68,6 +69,32 @@ classes
 `[style.color]="product.discount != 0 ? 'green':''"`
 
 
+server
+------
+```shell
+cd api-server
+npm install
+npm start
+```
+```shell
+curl localhost:8081/api/products
+```
+```shell
+curl localhost:8081/api/cart
+```
 
+***[proxy.conf.json](src/proxy.conf.json)
+```json
+{
+  "/api": {
+    "target": "http://localhost:8081",
+    "secure": false
+  }
+}
+```
+[angular.json](angular.json)
+```
+projects.angular-fundamentals.architect.serve.configurations.development.proxyConfig: "src/proxy.conf.json"
+```
 
 
