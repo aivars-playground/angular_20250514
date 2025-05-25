@@ -15,6 +15,7 @@
       #templateVariablePassword="ngModel"
       placeholder="Password"
       type="password"
+      required
       [(ngModel)]="credentials.password"
     />
     <div class="buttons">
@@ -26,22 +27,41 @@
   </form>
 </div>
 
-<pre>
-  FORM
-  templateVariableSignInForm valid:     {{templateVariableSignInForm.valid}}
-  templateVariableSignInForm invalid:   {{templateVariableSignInForm.invalid}}
-  templateVariableSignInForm dirty:     {{templateVariableSignInForm.dirty}}
-  templateVariableSignInForm pristine:  {{templateVariableSignInForm.pristine}}
-  templateVariableSignInForm touched:   {{templateVariableSignInForm.touched}}
-  templateVariableSignInForm untouched: {{templateVariableSignInForm.untouched}}
-  templateVariableSignInForm submitted: {{templateVariableSignInForm.submitted}}
-</pre>
-<pre>
-  EMAIL
-  templateVariableEmail valid:     {{templateVariableEmail.valid}}
-  templateVariableEmail invalid:   {{templateVariableEmail.invalid}}
-  templateVariableEmail dirty:     {{templateVariableEmail.dirty}}
-  templateVariableEmail pristine:  {{templateVariableEmail.pristine}}
-  templateVariableEmail touched:   {{templateVariableEmail.touched}}
-  templateVariableEmail untouched: {{templateVariableEmail.untouched}}
-</pre>
+<table>
+  <tr>
+    <td>
+      <pre>
+        FORM
+templateVariableSignInForm valid:     {{templateVariableSignInForm.valid}}
+templateVariableSignInForm invalid:   {{templateVariableSignInForm.invalid}}
+templateVariableSignInForm dirty:     {{templateVariableSignInForm.dirty}}
+templateVariableSignInForm pristine:  {{templateVariableSignInForm.pristine}}
+templateVariableSignInForm touched:   {{templateVariableSignInForm.touched}}
+templateVariableSignInForm untouched: {{templateVariableSignInForm.untouched}}
+templateVariableSignInForm submitted: {{templateVariableSignInForm.submitted}}
+      </pre>
+    </td>
+    <td>
+      <pre>
+EMAIL
+templateVariableEmail valid:     {{templateVariableEmail.valid}}
+templateVariableEmail invalid:   {{templateVariableEmail.invalid}}
+templateVariableEmail dirty:     {{templateVariableEmail.dirty}}
+templateVariableEmail pristine:  {{templateVariableEmail.pristine}}
+templateVariableEmail touched:   {{templateVariableEmail.touched}}
+templateVariableEmail untouched: {{templateVariableEmail.untouched}}
+      </pre>
+    </td>
+    <td>
+      <pre>
+EMAIL
+templateVariablePassword valid:     {{templateVariablePassword.valid}}
+templateVariablePassword invalid:   {{templateVariablePassword.invalid}}
+templateVariablePassword dirty:     {{templateVariablePassword.dirty}}
+templateVariablePassword pristine:  {{templateVariablePassword.pristine}}
+templateVariablePassword touched:   {{templateVariablePassword.touched}}
+templateVariablePassword untouched: {{templateVariablePassword.untouched}}
+      </pre>
+    </td>
+  </tr>
+</table>
