@@ -1,16 +1,18 @@
 <div class="container">
-  <form class="form" (ngSubmit)="signIn()">
+  <form #templateVariableSignInForm="ngForm" class="form" (ngSubmit)="signIn()">
     <img class="logo" src="/assets/images/logo.png" />
     <div class="sign-in">Sign In</div>
     <div class="sub-text">to acquire awesome bots</div>
     <input
       name="email"
+      #templateVariableEmail="ngModel"
       placeholder="Email Address"
       type="text"
       [(ngModel)]="credentials.email"
     />
     <input
       name="password"
+      #templateVariablePassword="ngModel"
       placeholder="Password"
       type="password"
       [(ngModel)]="credentials.password"
@@ -23,3 +25,23 @@
     <div class="signInError" *ngIf="signInError">FAILED</div>
   </form>
 </div>
+
+<pre>
+  FORM
+  templateVariableSignInForm valid:     {{templateVariableSignInForm.valid}}
+  templateVariableSignInForm invalid:   {{templateVariableSignInForm.invalid}}
+  templateVariableSignInForm dirty:     {{templateVariableSignInForm.dirty}}
+  templateVariableSignInForm pristine:  {{templateVariableSignInForm.pristine}}
+  templateVariableSignInForm touched:   {{templateVariableSignInForm.touched}}
+  templateVariableSignInForm untouched: {{templateVariableSignInForm.untouched}}
+  templateVariableSignInForm submitted: {{templateVariableSignInForm.submitted}}
+</pre>
+<pre>
+  EMAIL
+  templateVariableEmail valid:     {{templateVariableEmail.valid}}
+  templateVariableEmail invalid:   {{templateVariableEmail.invalid}}
+  templateVariableEmail dirty:     {{templateVariableEmail.dirty}}
+  templateVariableEmail pristine:  {{templateVariableEmail.pristine}}
+  templateVariableEmail touched:   {{templateVariableEmail.touched}}
+  templateVariableEmail untouched: {{templateVariableEmail.untouched}}
+</pre>
